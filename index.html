@@ -2,42 +2,772 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Greensonqo — Sitio en construcción</title>
-<meta name="description" content="Greensonqo: historias y acción por los Andes desde Cusco. Sitio en construcción.">
-<meta property="og:title" content="Greensonqo">
-<meta property="og:description" content="Historias y acción por los Andes desde Cusco. Sitio en construcción.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Greensonqo: convertimos tapitas de plástico de Cusco en posavasos, maceteros y muebles. Talleres, puntos de acopio e historias de los Andes.">
+<meta property="og:title" content="Greensonqo — del tacho de Cusco a tu mesa">
+<meta property="og:description" content="Tapitas de plástico de Cusco convertidas en productos. Talleres, puntos de acopio e historias de los Andes.">
 <meta property="og:image" content="https://greensonqo.com/og.png">
 <link rel="icon" href="favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-<style>
-:root{--g:#5A7A3A}
-*{box-sizing:border-box}
-html,body{height:100%;margin:0}
-body{background:var(--g);color:#fff;font:400 19px/1.5 "Crimson Pro",Georgia,serif;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
-main{max-width:520px}
-img{width:min(320px,80vw);height:auto}
-h1{font:600 clamp(1.8rem,6vw,2.6rem)/1.15 "Playfair Display",Georgia,serif;margin:28px 0 10px}
-p{margin:0 0 6px;color:#eef3e6}
-.en{font-style:italic;opacity:.85}
-.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
-.links a{color:#fff;text-decoration:none;border:2px solid rgba(255,255,255,.8);border-radius:30px;padding:8px 16px;font:600 .9rem system-ui,sans-serif}
-.links a:hover{background:#fff;color:var(--g)}
-</style>
+<style>body{margin:0;font:14px/1.4 system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 </head>
 <body>
-<main>
-  <img src="logo-blanco.png" alt="greensonqo" width="320" height="129">
-  <h1>Sitio en construcción</h1>
-  <p>Historias y acción por los Andes desde Cusco.</p>
-  <p class="en">Website under construction.</p>
-  <div class="links">
-    <a href="https://www.youtube.com/@greensonqo" target="_blank" rel="noopener">YouTube</a>
-    <a href="https://www.tiktok.com/@greensonqo" target="_blank" rel="noopener">TikTok</a>
-    <a href="https://www.instagram.com/greensonqo" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.facebook.com/greensonqo" target="_blank" rel="noopener">Facebook</a>
-    <a href="mailto:greensonqo@gmail.com">greensonqo@gmail.com</a>
+<title>Greensonqo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+/* One page. Green header, white page, brown for structure, red only for calls to action and impact numbers. */
+:root{
+  --g:#5A7A3A; --g-dk:#3F5A27; --brown:#3D2E28; --brown-2:#5A4A40; --red:#B5452F; --red-dk:#963624;
+  --bg:#FFFFFF; --soft:#F7F4EF; --ink:#2B211C; --mut:#6B5D52; --line:#E6DFD3; --arena:#F2EAD8;
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --body:"Crimson Pro",Georgia,"Times New Roman",serif;
+  --ui:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:124px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 19px/1.55 var(--body)}
+h1,h2,h3{font-family:var(--display);font-style:italic;font-weight:700;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.4rem,6vw,4.4rem);color:var(--brown)}
+h2{font-size:clamp(2rem,4.6vw,3.1rem);color:var(--brown)}
+h3{font-size:1.28rem;color:var(--brown)}
+p{margin:0}
+img{max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(64px,9vw,110px)}
+.kicker{font:600 .74rem/1 var(--ui);letter-spacing:.18em;text-transform:uppercase;color:var(--g)}
+.lede{font-size:1.2rem;max-width:60ch;color:var(--mut)}
+.stack{display:flex;flex-direction:column;gap:16px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 .95rem/1 var(--ui);text-decoration:none;padding:14px 22px;border-radius:999px;border:2px solid var(--red);background:var(--red);color:#fff;cursor:pointer}
+.btn:hover{background:var(--red-dk);border-color:var(--red-dk)}
+.btn.out{background:transparent;color:var(--brown);border-color:var(--brown)}
+.btn.out:hover{background:var(--brown);color:#fff}
+.tag{position:absolute;top:10px;left:10px;font:600 .62rem/1 var(--ui);letter-spacing:.1em;text-transform:uppercase;background:rgba(43,33,28,.72);color:#fff;padding:5px 7px;border-radius:4px}
+.tag.real{background:var(--g)}
+.divider{height:1px;background:var(--line);border:0;margin:0}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--g);z-index:30}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--g);color:#fff;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:112px}
+.logo img{display:block;height:99px;width:auto}
+.nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.nav button{border:0;background:transparent;color:#fff;font:600 .95rem/1 var(--ui);padding:10px 12px;border-radius:999px;cursor:pointer}
+.nav button:hover{background:rgba(255,255,255,.14)}
+.nav .lang{border:1.5px solid rgba(255,255,255,.7);margin-left:6px;font-size:.78rem;padding:8px 12px}
+
+/* hero */
+.hero{padding-block:clamp(40px,6vw,80px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero .sub{font-size:1.3rem;color:var(--mut);max-width:44ch;margin:18px 0 26px}
+.hero .pic{position:relative;border-radius:200px 200px 22px 22px;overflow:hidden;aspect-ratio:4/5;max-width:520px;justify-self:end;width:100%}
+.hero .pic img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* impact counter */
+.impact{background:var(--brown);color:var(--arena);padding-block:44px}
+.impact .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,1fr));gap:22px;align-items:end}
+.impact h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem)}
+.impact .k{color:#E7B9A9}
+.impact .stat b{display:block;font:700 italic clamp(2.4rem,5vw,3.6rem)/1 var(--display);color:#fff}
+.impact .stat b em{font-style:normal;color:#F08A6E}
+.impact .stat span{font:600 .8rem/1.3 var(--ui);letter-spacing:.06em;text-transform:uppercase;color:#D9CBBE}
+.impact small{grid-column:1/-1;font:.8rem var(--ui);color:#BFAFA2}
+
+/* products */
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:22px;margin-top:34px}
+.prod{position:relative;display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.prod .ph{aspect-ratio:1/1;overflow:hidden}
+.prod img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.prod:hover img{transform:scale(1.05)}
+.prod .info{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px}
+.prod .num{font:600 .7rem var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--g)}
+.prod p{color:var(--mut);font-size:1rem}
+.prod .now.soon{background:var(--brown)}
+.prod .now{position:absolute;top:36px;left:10px;font:700 .66rem/1 var(--ui);letter-spacing:.1em;text-transform:uppercase;background:var(--red);color:#fff;padding:6px 8px;border-radius:4px}
+
+.calc{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:26px;align-items:center;margin-top:44px;padding:28px;border-radius:20px;background:var(--soft);border:1px solid var(--line)}
+.calc output{display:block;font:700 italic clamp(2.6rem,6vw,3.8rem)/1 var(--display);color:var(--brown);margin:8px 0 12px}
+.calc label{font:600 .74rem var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.calc input{width:100%;accent-color:var(--red)}
+.calc .res{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.calc .res div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+.calc .res b{display:block;font:700 italic 2.2rem/1 var(--display);color:var(--red)}
+.calc .res span{font-size:.95rem;color:var(--mut)}
+.calc small{grid-column:1/-1;font:.8rem var(--ui);color:var(--mut)}
+
+.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.card{padding:22px;border-radius:16px;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;gap:8px}
+.card p{color:var(--mut);font-size:1.02rem}
+.card .who{font:600 .7rem var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--g)}
+.card ul{margin:2px 0 0;padding-left:18px;color:var(--mut);font-size:1rem}
+
+/* map */
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;margin-top:28px}
+.mapbox{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--soft)}
+.mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mapfallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;background:
+  radial-gradient(circle at 70% 60%, rgba(181,69,47,.12) 0 60px, transparent 61px),
+  repeating-linear-gradient(35deg, #EFEAE2 0 2px, transparent 2px 46px),
+  repeating-linear-gradient(-55deg, #EFEAE2 0 2px, transparent 2px 64px), var(--soft)}
+.mapfallback .pin{width:44px;height:44px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--red);box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.mapfallback p{font:.85rem/1.4 var(--ui);color:var(--mut);max-width:32ch}
+.points{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.points li{padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:#fff}
+.points b{font:700 1.05rem var(--ui);color:var(--brown)}
+.points small{display:block;font:.88rem/1.4 var(--ui);color:var(--mut);margin-top:4px}
+.points a{font:600 .82rem var(--ui);color:var(--red);text-decoration:none;display:inline-block;margin-top:8px}
+.points .ev{border-style:dashed}
+
+/* education */
+.edu{background:var(--soft);border-block:1px solid var(--line)}
+.tsteps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px;counter-reset:s}
+.tsteps div{padding:16px;border-radius:14px;background:#fff;border:1px solid var(--line);font:600 .95rem/1.35 var(--ui);color:var(--brown)}
+.tsteps div::before{counter-increment:s;content:counter(s);display:block;font:700 italic 1.9rem/1 var(--display);color:var(--red);margin-bottom:6px}
+.book{margin-top:26px;padding:24px;border-radius:18px;background:var(--brown);color:#fff;display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;justify-content:space-between}
+.book h3{color:#fff}
+.book p{color:#D9CBBE;font-size:1rem}
+.guide{margin-top:64px}
+.yesno{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr));gap:12px;margin-top:18px}
+.pl{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.pl img{display:block;width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;padding:8px}
+.pl b{font:600 .9rem/1.25 var(--ui);color:var(--brown);padding:0 12px}
+.pl span{font:.78rem/1.3 var(--ui);color:var(--mut);padding:2px 12px 12px}
+.pl.no{border-color:#EBCFC7}
+.pl.no img{opacity:.85;filter:saturate(.8)}
+.mark{display:inline-flex;align-items:center;gap:8px;font:700 .8rem var(--ui);letter-spacing:.12em;text-transform:uppercase;margin-top:30px}
+.mark i{font-style:normal;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;color:#fff}
+.mark.si{color:var(--g)}.mark.si i{background:var(--g)}
+.mark.no{color:var(--red)}.mark.no i{background:var(--red)}
+.rule{margin-top:22px;padding:18px 20px;border-left:4px solid var(--g);background:#fff;border-radius:0 12px 12px 0;font-size:1.08rem;max-width:72ch}
+
+/* media */
+.bigstat{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:26px}
+.bigstat b{font:700 italic clamp(3rem,9vw,5.6rem)/1 var(--display);color:var(--red)}
+.bigstat span{font-size:1.15rem;color:var(--mut);max-width:28ch}
+.chans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}
+.chan{display:flex;flex-direction:column;gap:4px;padding:18px;border-radius:14px;border:1px solid var(--line);text-decoration:none;background:#fff}
+.chan:hover{border-color:var(--brown)}
+.chan b{font:700 1.05rem var(--ui);color:var(--brown)}
+.chan span{font:.85rem var(--ui);color:var(--mut)}
+
+/* nosotros */
+.about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,60px);align-items:center}
+.about figure{position:relative;margin:0;border-radius:18px;overflow:hidden;max-width:440px;justify-self:end}
+.about figure img{display:block;width:100%;height:auto}
+.why{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,52px);align-items:center;margin-top:72px}
+.why figure{position:relative;margin:0;border-radius:18px;overflow:hidden;max-height:560px}
+.why figure img{display:block;width:100%;height:100%;object-fit:cover}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
+.fact{padding:14px;border-radius:12px;border:1px solid var(--line)}
+.fact b{display:block;font:700 italic 1.9rem/1 var(--display);color:var(--red)}
+.fact span{font-size:.95rem;color:var(--mut)}
+.mission{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.vision{margin-top:72px}
+.cmp{position:relative;margin-top:24px;border-radius:18px;overflow:hidden;aspect-ratio:16/10;max-width:900px;user-select:none}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp .after{clip-path:inset(0 0 0 50%)}
+.cmp .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 8px rgba(0,0,0,.4);pointer-events:none}
+.cmp .lab{position:absolute;bottom:12px;font:700 .72rem var(--ui);letter-spacing:.12em;text-transform:uppercase;background:rgba(43,33,28,.75);color:#fff;padding:6px 9px;border-radius:5px}
+.cmp .l{left:12px}.cmp .r{right:12px}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px;max-width:900px}
+.gallery figure{margin:0}
+.gallery img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px}
+.gallery figcaption{font:.8rem/1.3 var(--ui);color:var(--mut);margin-top:6px}
+.timeline{display:grid;gap:0;margin-top:26px;border-left:2px solid var(--line);padding-left:24px;max-width:760px}
+.tl{position:relative;padding:0 0 26px}
+.tl::before{content:"";position:absolute;left:-32px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--g)}
+.tl.next::before{background:#fff;border:3px solid var(--red)}
+.tl .when{font:600 .74rem var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.tl p:last-child{color:var(--mut);font-size:1.02rem;margin-top:4px}
+.founder{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:clamp(22px,4vw,48px);align-items:center;margin-top:24px;padding:28px;border-radius:20px;border:1px solid var(--line)}
+.me{display:block;width:100%;max-width:260px;height:auto;aspect-ratio:1/1;object-fit:cover}
+.ph-me{aspect-ratio:1/1;border-radius:50%;background:var(--soft);border:2px dashed var(--line);display:grid;place-items:center;text-align:center;font:600 .8rem var(--ui);color:var(--mut);padding:20px}
+.ph-me b{display:block;font:700 italic 3rem/1 var(--display);color:var(--brown);margin-bottom:6px}
+.founder .role{font:600 .74rem var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--g)}
+.founder p{color:var(--mut);font-size:1.08rem;max-width:62ch}
+.support{margin-top:72px}
+.goal{margin-top:22px;padding:24px;border-radius:18px;background:var(--soft);border:1px solid var(--line)}
+.checks{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.checks li{display:flex;gap:10px;align-items:center;font-size:1.05rem}
+.checks i{width:22px;height:22px;border-radius:50%;display:inline-grid;place-items:center;font:700 .75rem var(--ui);font-style:normal;flex:none}
+.checks .ok i{background:var(--g);color:#fff}
+.checks .wip i{border:2px solid var(--line);background:#fff}
+.bar2{height:10px;border-radius:999px;background:#fff;border:1px solid var(--line);margin-top:16px;overflow:hidden}
+.bar2 span{display:block;height:100%;width:40%;background:var(--red)}
+.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.yapeqr{margin:6px 0 0;max-width:170px;background:#fff;border-radius:12px;padding:10px;border:1px solid var(--line);text-align:center}
+.yapeqr img{display:block;width:100%;height:auto}
+.yapeqr figcaption{font:600 .72rem var(--ui);color:#742284;margin-top:6px}
+
+/* join + footer */
+.pl.two{border:2px dashed var(--g);background:#F4F8EF}
+.pl.two .tri{aspect-ratio:1/1;display:grid;place-items:center;color:var(--g);padding:22%}
+.pl.two .tri svg{width:100%;height:auto}
+
+.feeds{display:grid;gap:30px;margin-top:34px}
+.feed-h b{font:700 .8rem var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--g)}
+.posts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:10px}
+.post{position:relative;display:block;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--soft)}
+.post img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.post:hover img{transform:scale(1.04)}
+.post .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(181,69,47,.92);display:grid;place-items:center}
+.post .play::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.post iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.post.live{aspect-ratio:9/16}
+.allies{margin-top:72px;padding:32px;border-radius:20px;border:1px solid var(--line)}
+.logos{display:flex;flex-wrap:wrap;gap:28px;align-items:center;margin-top:20px}
+.logos figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:8px;font:600 .8rem var(--ui);color:var(--mut)}
+.logos img{width:110px;height:110px;object-fit:contain}
+.logos .you{width:110px;height:110px;border-radius:50%;border:2px dashed var(--line);display:grid;place-items:center;font:700 italic 2rem var(--display);color:var(--mut)}
+.nominate{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.nominate input{flex:1 1 260px;min-width:0;font:400 1rem var(--ui);padding:14px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink)}
+@media (max-width:900px){.posts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.tapreal{position:relative;margin:0;border-radius:14px;overflow:hidden}
+.tapreal img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%}
+
+.icons{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.icons a{--icon-bg:#fff;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--brown);color:#fff;transition:transform .2s,background .2s}
+.icons a:hover{background:var(--red);transform:translateY(-2px)}
+.icons a:hover svg path[fill^="var"]{fill:var(--red)}
+.icons svg{width:24px;height:24px}
+.icons a:nth-child(3) svg path{fill:var(--brown)}
+.icons a:nth-child(3):hover svg path{fill:var(--red)}
+.icons.light a{background:rgba(255,255,255,.16);width:42px;height:42px}
+.icons.light a:nth-child(3) svg path{fill:var(--g)}
+.icons.light svg{width:20px;height:20px}
+.me{clip-path:polygon(12% 0,88% 0,88% 6%,94% 6%,94% 12%,100% 12%,100% 88%,94% 88%,94% 94%,88% 94%,88% 100%,12% 100%,12% 94%,6% 94%,6% 88%,0 88%,0 12%,6% 12%,6% 6%,12% 6%);border-radius:0!important}
+.sonqo{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:clamp(24px,5vw,60px);align-items:center}
+.sonqo img{width:100%;max-width:220px;height:auto}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:6px}
+.pillars div{padding:14px 16px;border-radius:12px;border:1px solid var(--line);font-size:1rem;color:var(--mut)}
+.pillars b{display:block;font:700 italic 1.15rem var(--display);color:var(--brown);margin-bottom:2px}
+.fund{margin-top:22px;padding:26px;border-radius:18px;background:var(--brown);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px;align-items:center}
+.fund .amt{font:700 italic clamp(2.8rem,7vw,4.4rem)/1 var(--display);color:#F08A6E}
+.fund .amt small{display:block;font:600 .8rem var(--ui);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:#D9CBBE;margin-top:8px}
+.fund ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.fund li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline;font-size:1.05rem;color:#EFE6DC}
+.fund li b{font:700 .9rem var(--ui);color:#fff;min-width:78px}
+@media (max-width:900px){.sonqo,.fund{grid-template-columns:minmax(0,1fr)}.pillars{grid-template-columns:minmax(0,1fr)}}
+
+.join{background:var(--soft);border-top:1px solid var(--line)}
+.jgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);align-items:end}
+.jgrid .nl{margin-top:0}
+@media (max-width:900px){.jgrid{grid-template-columns:minmax(0,1fr)}}
+.nl{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.nl input{flex:1 1 180px;min-width:0;font:400 1rem var(--ui);padding:14px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink)}
+.nl input:focus{outline:none;border-color:var(--brown)}
+.nl-msg{font:600 .9rem var(--ui);color:var(--g);min-height:1.2em}
+.nl-msg.err{color:var(--red)}
+.social{display:flex;flex-direction:column;gap:10px}
+.mailline{font:600 .9rem var(--ui);color:var(--mut);user-select:all;margin-top:4px}
+@media (max-width:900px){.jgrid{grid-template-columns:minmax(0,1fr)}}
+
+.contact{background:var(--soft);border-top:1px solid var(--line)}
+.mail{font:600 1rem var(--ui);user-select:all;padding:12px 16px;border-radius:999px;border:1px dashed var(--brown-2)}
+.copy{border:0;background:transparent;font:600 .9rem var(--ui);color:var(--red);cursor:pointer;text-decoration:underline}
+footer{background:var(--g);color:#EAF0E2;padding-block:44px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+footer img{height:56px;width:auto}
+footer small{font:.8rem var(--ui);color:#D5E0C8}
+
+.pv{padding-block:clamp(56px,8vw,96px);border-top:1px solid var(--line)}
+.pv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px}
+.pv-card{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;text-align:left;cursor:pointer;padding:0}
+.pv-card:hover{border-color:var(--brown)}
+.pv-card .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
+.pv-card .ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.pv-card:hover .ph img{transform:scale(1.05)}
+.pv-card .info{display:flex;flex-direction:column;gap:8px;padding:20px 22px 24px}
+.pv-card p{color:var(--mut);font-size:1.02rem}
+.pv-card .more{font:600 .9rem var(--ui);color:var(--red);margin-top:4px}
+.nav button[aria-current="page"]{background:rgba(255,255,255,.2)}
+.pagehead{padding-bottom:0}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+.photos figure{position:relative;margin:0;border-radius:16px;overflow:hidden}
+.photos img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.videos{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px;margin-top:22px}
+.vid{position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;min-height:240px;padding:22px;border-radius:18px;background:var(--brown);color:#fff;text-decoration:none;overflow:hidden}
+.vid.small{background:var(--brown-2)}
+.vid .play{position:absolute;top:22px;left:22px;width:58px;height:58px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+.vid .play::after{content:"";border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.vid b{font:700 italic 1.45rem/1.15 var(--display)}
+.vid span{font:600 .8rem var(--ui);letter-spacing:.08em;text-transform:uppercase;color:#E7B9A9}
+.vid img.th{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.vid .play,.vid span,.vid b{position:relative;z-index:1}
+.vid .play{position:absolute}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid.has-embed{padding:0;aspect-ratio:16/9;min-height:0}
+@media (max-width:900px){.videos,.photos{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.pv-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){
+  .hero .wrap,.about,.why,.mapgrid,.calc,.founder{grid-template-columns:minmax(0,1fr)}
+  .hero .pic,.about figure{justify-self:start;max-width:420px}
+  .impact .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .impact .wrap>div:first-child{grid-column:1/-1}
+  .cards3,.mission,.ways{grid-template-columns:minmax(0,1fr)}
+  .tsteps,.chans,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .founder .me{max-width:200px}
+}
+@media (max-width:640px){
+  .bar .wrap{flex-direction:column;align-items:flex-start;gap:4px;padding-block:10px;min-height:0}
+  .logo img{height:60px}
+  .nav{justify-content:flex-start;margin-left:-12px}
+  .nav button{padding:8px 10px;font-size:.88rem}
+  html{scroll-padding-top:150px}
+  .impact .stat b{font-size:2.1rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#" data-go="inicio" aria-label="Greensonqo, inicio"><img src="img/logo-blanco.png" alt="greensonqo" width="800" height="322"></a>
+    <nav class="nav" aria-label="Secciones">
+      <button data-go="productos" data-es="Productos" data-en="Products">Productos</button>
+      <button data-go="educacion" data-es="Educación" data-en="Education">Educación</button>
+      <button data-go="media" data-es="Media" data-en="Media">Media</button>
+      <button data-go="nosotros" data-es="Nosotros" data-en="About">Nosotros</button>
+      <button class="lang" id="lang" type="button" aria-label="Cambiar idioma / Change language">EN</button>
+    </nav>
   </div>
+</header>
+
+<main id="top">
+
+<div class="view" id="v-inicio">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker" data-es="Plástico reciclado · Cusco" data-en="Recycled plastic · Cusco">Plástico reciclado · Cusco</p>
+      <h1 style="margin-top:14px" data-es="Del tacho de Cusco a la banca de tu plaza." data-en="From Cusco's trash bin to your plaza's bench.">Del tacho de Cusco a la banca de tu plaza.</h1>
+      <p class="sub" data-es="Convertimos el plástico duro de Cusco en piezas hechas a mano, y te enseñamos a hacerlo en nuestros talleres." data-en="We turn Cusco's hard plastic into handmade pieces, and teach you how in our workshops.">Convertimos el plástico duro de Cusco en piezas hechas a mano, y te enseñamos a hacerlo en nuestros talleres.</p>
+      <div class="row">
+        <button class="btn" data-go="productos" data-es="Ver productos" data-en="See products">Ver productos</button>
+        <button class="btn out" data-go="educacion" data-es="Reservar un taller" data-en="Book a workshop">Reservar un taller</button>
+      </div>
+    </div>
+    <div class="pic"><img src="img/calle-banca.jpg" alt="Calle de Cusco con un riachuelo y una banca de plástico reciclado" width="588" height="728"></div>
+  </div>
+</section>
+
+<div class="impact" id="contador">
+  <div class="wrap">
+    <div>
+      <p class="kicker k" data-es="Contador del taller" data-en="Workshop counter">Contador del taller</p>
+      <h2 data-es="Lo que ya no está en el río" data-en="What's no longer in the river">Lo que ya no está en el río</h2>
+    </div>
+    <div class="stat"><b><em id="c-kg">0</em></b><span data-es="kilos de plástico reciclados" data-en="kilos of plastic recycled">kilos de plástico reciclados</span></div>
+    <div class="stat"><b id="c-caps">0</b><span data-es="tapitas, más o menos" data-en="bottle caps, roughly">tapitas, más o menos</span></div>
+    <div class="stat"><b id="c-pz">0</b><span data-es="piezas hechas en Cusco" data-en="pieces made in Cusco">piezas hechas en Cusco</span></div>
+    <small id="c-date"></small>
+  </div>
+</div>
+
+
+<section class="pv">
+  <div class="wrap">
+    <p class="kicker" data-es="Lo que hacemos" data-en="What we do">Lo que hacemos</p>
+    <h2 style="margin-top:12px" data-es="Tres maneras de cuidar Cusco" data-en="Three ways to care for Cusco">Tres maneras de cuidar Cusco</h2>
+    <div class="pv-grid">
+      <button class="pv-card" data-go="productos"><div class="ph"><img src="img/posavasos.jpg" alt="Posavasos de plástico reciclado" width="720" height="720"></div><div class="info"><p class="kicker" data-es="Productos" data-en="Products">Productos</p><h3 data-es="Piezas hechas con tapitas de Cusco" data-en="Pieces made from Cusco bottle caps">Piezas hechas con tapitas de Cusco</h3><p data-es="Posavasos listos hoy. Banquillos, bancas y maceteros a pedido." data-en="Coasters ready today. Stools, benches and planters made to order.">Posavasos listos hoy. Banquillos, bancas y maceteros a pedido.</p><span class="more" data-es="Ver productos →" data-en="See products →">Ver productos →</span></div></button>
+      <button class="pv-card" data-go="educacion"><div class="ph"><img src="img/tapaton-real.jpg" alt="Alfredo con bolsas llenas de tapitas recolectadas" style="object-position:50% 30%"></div><div class="info"><p class="kicker" data-es="Educación" data-en="Education">Educación</p><h3 data-es="Talleres para colegios, empresas y viajeros" data-en="Workshops for schools, companies and travelers">Talleres para colegios, empresas y viajeros</h3><p data-es="Trae tus tapitas, derrítelas con nosotros y llévate tu posavasos." data-en="Bring your caps, melt them with us and take home your coaster.">Trae tus tapitas, derrítelas con nosotros y llévate tu posavasos.</p><span class="more" data-es="Ver talleres →" data-en="See workshops →">Ver talleres →</span></div></button>
+      <button class="pv-card" data-go="media"><div class="ph"><img src="img/media/yt-truR8s1Aij8.jpg" alt="Video: 730 botellas"></div><div class="info"><p class="kicker" data-es="Media" data-en="Media">Media</p><h3 data-es="Historias de los Andes" data-en="Stories of the Andes">Historias de los Andes</h3><p data-es="Videos en español e inglés. El cóndor andino pasó las 592 mil vistas." data-en="Videos in Spanish and English. The Andean condor passed 592K views.">Videos en español e inglés. El cóndor andino pasó las 592 mil vistas.</p><span class="more" data-es="Ver media →" data-en="See media →">Ver media →</span></div></button>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ PLÁSTICOS ============ -->
+<div class="view" id="v-productos" hidden>
+<section id="productos">
+  <div class="wrap">
+    <p class="kicker" data-es="Productos" data-en="Products">Productos</p>
+    <h2 style="margin-top:12px" data-es="Hecho a mano en Cusco. No hay dos iguales." data-en="Handmade in Cusco. No two alike.">Hecho a mano en Cusco. No hay dos iguales.</h2>
+    <p class="lede" style="margin-top:14px" data-es="Los posavasos ya están listos. Los muebles se hacen a pedido: cada pieza sale numerada y lleva un código QR con su historia. Los colores salen del plástico que llega." data-en="Coasters are ready now. Furniture is made to order: every piece is numbered, with a QR code that tells its story. The colors come from the plastic we receive.">Los posavasos ya están listos. Los muebles se hacen a pedido: cada pieza sale numerada y lleva un código QR con su historia. Los colores salen del plástico que llega.</p>
+    <div class="products">
+      <article class="prod"><div class="ph"><img src="img/posavasos.jpg" alt="Cuatro posavasos de plástico reciclado veteados en blanco y negro" width="720" height="720"></div><span class="now" data-es="Disponible ya" data-en="Available now">Disponible ya</span><div class="info"><span class="num" data-es="Juego de 4 · regalo" data-en="Set of 4 · gift">Juego de 4 · regalo</span><h3 data-es="Posavasos" data-en="Coasters">Posavasos</h3><p data-es="Cada uno lleva unas 28 tapitas de Cusco. Veteado único, para tu mesa o para regalar." data-en="Each one holds about 28 Cusco bottle caps. One-of-a-kind marbling, for your table or as a gift.">Cada uno lleva unas 28 tapitas de Cusco. Veteado único, para tu mesa o para regalar.</p></div></article>
+      <article class="prod"><div class="ph"><img src="img/macetero.jpg" alt="Macetero de plástico reciclado veteado" width="720" height="720"></div><span class="now soon" data-es="Próximamente" data-en="Coming soon">Próximamente</span><div class="info"><span class="num" data-es="Para tus plantas" data-en="For your plants">Para tus plantas</span><h3 data-es="Macetero" data-en="Planter">Macetero</h3><p data-es="Dentro o fuera de casa. Cada uno con su propio veteado." data-en="Indoors or out. Each with its own marbling.">Dentro o fuera de casa. Cada uno con su propio veteado.</p></div></article>
+      <article class="prod"><div class="ph"><img src="img/banquillo.jpg" alt="Banquillo de plástico reciclado verde y azul" width="720" height="720"></div><span class="now soon" data-es="Diciembre 2026" data-en="December 2026">Diciembre 2026</span><div class="info"><span class="num" data-es="Interior y exterior" data-en="Indoor and outdoor">Interior y exterior</span><h3 data-es="Banquillo" data-en="Stool">Banquillo</h3><p data-es="Para la casa, el patio o la tienda. No se pudre ni le entra polilla." data-en="For home, patio or shop. Won't rot, no woodworm.">Para la casa, el patio o la tienda. No se pudre ni le entra polilla.</p></div></article>
+    </div>
+    <div class="row" style="margin-top:24px">
+      <a class="btn" href="https://m.me/greensonqo" target="_blank" rel="noopener" data-es="Pedir por mensaje" data-en="Order by message">Pedir por mensaje</a>
+    </div>
+
+    <div class="calc">
+      <div>
+        <h3 data-es="¿Cuántas tapitas tienes guardadas?" data-en="How many caps have you saved?">¿Cuántas tapitas tienes guardadas?</h3>
+        <output id="capsout">1,000</output>
+        <label for="caps" data-es="Mueve la barra" data-en="Move the slider">Mueve la barra</label>
+        <input type="range" id="caps" min="100" max="20000" step="100" value="1000">
+      </div>
+      <div class="res">
+        <div><b id="kg">2.5</b><span data-es="kilos de plástico" data-en="kilos of plastic">kilos de plástico</span></div>
+        <div><b id="ps">36</b><span data-es="posavasos" data-en="coasters">posavasos</span></div>
+      </div>
+      <small data-es="Cálculo aproximado: una tapita pesa unos 2.5 g y un posavasos usa unos 70 g de plástico." data-en="Rough estimate: a cap weighs about 2.5 g and a coaster uses about 70 g of plastic.">Cálculo aproximado: una tapita pesa unos 2.5 g y un posavasos usa unos 70 g de plástico.</small>
+    </div>
+
+    <div style="margin-top:72px">
+      <p class="kicker" data-es="Para negocios e instituciones" data-en="For businesses and institutions">Para negocios e instituciones</p>
+      <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-top:10px" data-es="Pedidos grandes, con factura." data-en="Large orders, invoiced.">Pedidos grandes, con factura.</h3>
+      <div class="cards3">
+        <div class="card"><h3 data-es="Bancas para espacios públicos" data-en="Benches for public spaces">Bancas para espacios públicos</h3><p data-es="Parques, plazas, paraderos y patios. No se pudren ni se pintan." data-en="Parks, plazas, bus stops and patios. They don't rot or need paint.">Parques, plazas, paraderos y patios. No se pudren ni se pintan.</p></div>
+        <div class="card"><h3 data-es="Tu plástico, tu banca" data-en="Your plastic, your bench">Tu plástico, tu banca</h3><p data-es="Tu hotel o colegio junta sus tapitas y le devolvemos muebles hechos con ellas." data-en="Your hotel or school collects its caps and we return furniture made from them.">Tu hotel o colegio junta sus tapitas y le devolvemos muebles hechos con ellas.</p></div>
+        <div class="card"><h3 data-es="Regalos con tu marca" data-en="Branded gifts">Regalos con tu marca</h3><p data-es="Posavasos y piezas hechas con el plástico de tu empresa, para clientes y eventos." data-en="Coasters and pieces made from your company's plastic, for clients and events.">Posavasos y piezas hechas con el plástico de tu empresa, para clientes y eventos.</p></div>
+      </div>
+      <div class="row" style="margin-top:18px"><a class="btn out" href="https://m.me/greensonqo" target="_blank" rel="noopener" data-es="Pedir cotización" data-en="Request a quote">Pedir cotización</a></div>
+    </div>
+
+    <div class="allies" id="aliados">
+      <p class="kicker" data-es="Aliados" data-en="Partners">Aliados</p>
+      <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-top:10px" data-es="Negocios que ya reciclan con nosotros" data-en="Businesses already recycling with us">Negocios que ya reciclan con nosotros</h3>
+      <div class="logos">
+        <figure><img src="img/aliados/casa-malaquita.png" alt="Casa Malaquita"><figcaption>Casa Malaquita</figcaption></figure>
+        <figure><img src="img/aliados/valylac.png" alt="ValyLac"><figcaption>ValyLac</figcaption></figure>
+        <figure><span class="you">+</span><figcaption data-es="¿Tu negocio?" data-en="Your business?">¿Tu negocio?</figcaption></figure>
+      </div>
+      <p class="lede" style="margin-top:22px" data-es="¿Conoces un negocio que bota mucho plástico? Nómbralo y lo invitamos a ser aliado." data-en="Know a business that throws away a lot of plastic? Name it and we'll invite them to partner with us.">¿Conoces un negocio que bota mucho plástico? Nómbralo y lo invitamos a ser aliado.</p>
+      <form class="nominate" id="nom" novalidate>
+        <input id="nom-txt" type="text" placeholder="Nombre del negocio y dónde está" data-ph-es="Nombre del negocio y dónde está" data-ph-en="Business name and where it is" required>
+        <button class="btn" type="submit" data-es="Nominar" data-en="Nominate">Nominar</button>
+      </form>
+      <p class="nl-msg" id="nom-msg" role="status"></p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ============ EDUCACIÓN ============ -->
+<div class="view" id="v-educacion" hidden>
+<section id="educacion">
+  <div class="wrap">
+    <p class="kicker" data-es="Educación · talleres" data-en="Education · workshops">Educación · talleres</p>
+    <h2 style="margin-top:12px" data-es="Ven con tus tapitas. Vete con tu posavasos." data-en="Bring your caps. Leave with your coaster.">Ven con tus tapitas. Vete con tu posavasos.</h2>
+    <p class="lede" style="margin-top:14px" data-es="Un taller práctico de 2 horas: aprendes qué plástico sirve, lo derrites con nosotros y te llevas una pieza hecha por ti. En tu colegio, tu empresa o en nuestro taller de San Jerónimo." data-en="A hands-on 2-hour workshop: learn which plastic works, melt it with us and take home a piece you made. At your school, your company or our San Jerónimo workshop.">Un taller práctico de 2 horas: aprendes qué plástico sirve, lo derrites con nosotros y te llevas una pieza hecha por ti. En tu colegio, tu empresa o en nuestro taller de San Jerónimo.</p>
+    <div class="tsteps">
+      <div data-es="Separamos tapitas por tipo y color" data-en="Sort caps by type and color">Separamos tapitas por tipo y color</div>
+      <div data-es="Vemos qué pasa con el plástico en Cusco" data-en="See what happens to plastic in Cusco">Vemos qué pasa con el plástico en Cusco</div>
+      <div data-es="Derretimos y prensamos en el molde" data-en="Melt and press it in the mould">Derretimos y prensamos en el molde</div>
+      <div data-es="Cada uno se lleva su posavasos" data-en="Everyone takes home a coaster">Cada uno se lleva su posavasos</div>
+    </div>
+    <div class="photos">
+      <figure><img src="img/estrella-mano.jpg" alt="Estrella de plástico reciclado recién salida del molde"></figure>
+      <figure><img src="img/estrella-1.jpg" alt="Estrella de tapitas de colores sobre la mesa del taller"></figure>
+      <figure><img src="img/tapaton-real.jpg" alt="Bolsas llenas de tapitas recolectadas en Casa Malaquita" style="object-position:50% 35%"></figure>
+    </div>
+    <div class="cards3">
+      <article class="card"><span class="who" data-es="Colegios y universidades" data-en="Schools and universities">Colegios y universidades</span><h3 data-es="Una clase que se toca" data-en="A class you can touch">Una clase que se toca</h3><p data-es="Ciencia, ambiente y reciclaje en una sola sesión." data-en="Science, environment and recycling in one session.">Ciencia, ambiente y reciclaje en una sola sesión.</p><ul><li data-es="Grupos de hasta 30" data-en="Groups up to 30">Grupos de hasta 30</li><li data-es="Vamos a tu colegio" data-en="We come to you">Vamos a tu colegio</li></ul></article>
+      <article class="card"><span class="who" data-es="Empresas" data-en="Companies">Empresas</span><h3 data-es="Día de equipo" data-en="Team day">Día de equipo</h3><p data-es="Tu equipo convierte el plástico de la oficina en regalos con tu marca." data-en="Your team turns the office's plastic into branded gifts.">Tu equipo convierte el plástico de la oficina en regalos con tu marca.</p><ul><li data-es="Grupos de 8 a 25" data-en="Groups of 8 to 25">Grupos de 8 a 25</li><li data-es="Con factura" data-en="Invoiced">Con factura</li></ul></article>
+      <article class="card"><span class="who" data-es="Hostales y viajeros" data-en="Hostels and travelers">Hostales y viajeros</span><h3 data-es="Un recuerdo de Cusco hecho por ti" data-en="A Cusco souvenir you made">Un recuerdo de Cusco hecho por ti</h3><p data-es="Una actividad distinta para tus huéspedes." data-en="A different activity for your guests.">Una actividad distinta para tus huéspedes.</p><ul><li data-es="Grupos de 4 a 12" data-en="Groups of 4 to 12">Grupos de 4 a 12</li><li data-es="Español o inglés" data-en="Spanish or English">Español o inglés</li></ul></article>
+    </div>
+    <div class="book">
+      <div class="stack" style="gap:6px"><h3 data-es="Reserva una fecha" data-en="Book a date">Reserva una fecha</h3><p data-es="Escríbenos con el día, el lugar y cuántas personas. Incluye materiales, guantes y mascarillas." data-en="Message us with the day, place and group size. Materials, gloves and masks included.">Escríbenos con el día, el lugar y cuántas personas. Incluye materiales, guantes y mascarillas.</p></div>
+      <a class="btn" href="https://m.me/greensonqo" target="_blank" rel="noopener" data-es="Reservar un taller" data-en="Book a workshop">Reservar un taller</a>
+    </div>
+
+    <div class="guide" id="recibimos">
+      <p class="kicker" data-es="Antes de juntar" data-en="Before you collect">Antes de juntar</p>
+      <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-top:10px" data-es="¿Qué plástico recibimos?" data-en="Which plastic do we take?">¿Qué plástico recibimos?</h3>
+      <p class="mark si"><i>✓</i><span data-es="Esto sí" data-en="Yes">Esto sí</span></p>
+      <div class="yesno" id="si"></div>
+      <p class="mark no"><i>✕</i><span data-es="Esto no" data-en="No">Esto no</span></p>
+      <div class="yesno" id="no"></div>
+      <p class="rule" data-es="La regla rápida: si es duro, no se arruga con la mano y suena hueco, casi siempre sirve. Busca el 2 dentro del triangulito. Siempre limpio y seco." data-en="Quick rule: if it's hard, doesn't crumple in your hand and sounds hollow, it almost always works. Look for the 2 in the little triangle. Always clean and dry.">La regla rápida: si es duro, no se arruga con la mano y suena hueco, casi siempre sirve. Busca el 2 dentro del triangulito. Siempre limpio y seco.</p>
+    </div>
+    <div id="mapa" class="guide">
+      <p class="kicker" data-es="Dónde dejar tu plástico" data-en="Where to drop your plastic">Dónde dejar tu plástico</p>
+      <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-top:10px" data-es="Puntos de acopio en Cusco" data-en="Drop-off points in Cusco">Puntos de acopio en Cusco</h3>
+      <div class="mapgrid">
+        <div class="mapbox" id="mapbox">
+          <div class="mapfallback">
+            <div class="pin" aria-hidden="true"></div>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Casa%20Malaquita%20Larapa%20Cusco" target="_blank" rel="noopener" data-es="Abrir en Google Maps" data-en="Open in Google Maps">Abrir en Google Maps</a>
+            <p data-es="En greensonqo.com aquí se ve el mapa de Google en vivo." data-en="On greensonqo.com the live Google map shows here.">En greensonqo.com aquí se ve el mapa de Google en vivo.</p>
+          </div>
+        </div>
+        <ul class="points">
+          <li><b>1 · Casa Malaquita</b><small data-es="Larapa · Av. 5, 1er pasaje a la derecha, al costado de la U. Andina (casa verde). Punto de acopio permanente." data-en="Larapa · Av. 5, first passage on the right, next to U. Andina (green house). Permanent drop-off point.">Larapa · Av. 5, 1er pasaje a la derecha, al costado de la U. Andina (casa verde). Punto de acopio permanente.</small><a href="https://www.google.com/maps/search/?api=1&query=Casa%20Malaquita%20Larapa%20Cusco" target="_blank" rel="noopener" data-es="Cómo llegar ↗" data-en="Directions ↗">Cómo llegar ↗</a></li>
+          <li class="ev"><b data-es="Tapatón Black Friday" data-en="Black Friday Tapatón">Tapatón Black Friday</b><small data-es="Casa Malaquita · vie 27 nov, 11 a. m. Trae tus tapitas y llévate descuentos." data-en="Casa Malaquita · Fri Nov 27, 11 a.m. Bring your caps, get discounts.">Casa Malaquita · vie 27 nov, 11 a. m. Trae tus tapitas y llévate descuentos.</small></li>
+          <li class="ev"><b data-es="Jornada ValyLac" data-en="ValyLac collection day">Jornada ValyLac</b><small data-es="Yanahuara (Valle Sagrado) · dom 22 nov, 10 a. m., tercer paradero." data-en="Yanahuara (Sacred Valley) · Sun Nov 22, 10 a.m., third stop.">Yanahuara (Valle Sagrado) · dom 22 nov, 10 a. m., tercer paradero.</small></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="guide" id="videos">
+      <p class="kicker" data-es="Aprende más" data-en="Learn more">Aprende más</p>
+      <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);margin-top:10px" data-es="Mira la historia completa del plástico" data-en="Watch the full story of plastic">Mira la historia completa del plástico</h3>
+      <div class="videos">
+        <a class="vid" data-yt="truR8s1Aij8" href="https://www.youtube.com/watch?v=truR8s1Aij8" target="_blank" rel="noopener"><img class="th" src="img/media/yt-truR8s1Aij8.jpg" alt=""><i class="play" aria-hidden="true"></i><span data-es="YouTube · 44 min" data-en="YouTube · 44 min">YouTube · 44 min</span><b>¿Cuántas botellas de plástico tiras al año? La verdad</b></a>
+        <a class="vid small" data-yt="HJSIsfAC56Y" href="https://www.youtube.com/watch?v=HJSIsfAC56Y" target="_blank" rel="noopener"><img class="th" src="img/media/yt-HJSIsfAC56Y.jpg" alt=""><i class="play" aria-hidden="true"></i><span data-es="YouTube · 15 min" data-en="YouTube · 15 min">YouTube · 15 min</span><b>El mito del reciclaje: por qué el 91% del plástico termina en la basura</b></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ============ MEDIA ============ -->
+<div class="view" id="v-media" hidden>
+<section id="media">
+  <div class="wrap">
+    <p class="kicker" data-es="Media" data-en="Media">Media</p>
+    <h2 style="margin-top:12px" data-es="Historias de los Andes" data-en="Stories of the Andes">Historias de los Andes</h2>
+    <p class="lede" style="margin-top:14px" data-es="Videos en español e inglés sobre la gente, la comida, los animales y la tierra de los Andes, y sobre lo que hacemos en el taller." data-en="Videos in Spanish and English about the people, food, animals and land of the Andes, and what we do in the workshop.">Videos en español e inglés sobre la gente, la comida, los animales y la tierra de los Andes, y sobre lo que hacemos en el taller.</p>
+    <div class="bigstat"><b>592 mil</b><span data-es="vistas en TikTok de un solo video: el cóndor andino." data-en="TikTok views on a single video: the Andean condor.">vistas en TikTok de un solo video: el cóndor andino.</span></div>
+    <div class="feeds"><div class="feed"><p class="feed-h"><b>TikTok</b></p><div class="posts"><a class="post" href="https://www.tiktok.com/@greensonqo/video/7706344289873317140" target="_blank" rel="noopener" data-embed="https://www.tiktok.com/embed/v2/7706344289873317140"><img src="img/media/tt-7706344289873317140.jpg" alt="Video de TikTok" loading="lazy"><i class="play" aria-hidden="true"></i></a><a class="post" href="https://www.tiktok.com/@greensonqo/video/7657373608393608469" target="_blank" rel="noopener" data-embed="https://www.tiktok.com/embed/v2/7657373608393608469"><img src="img/media/tt-7657373608393608469.jpg" alt="Video de TikTok" loading="lazy"><i class="play" aria-hidden="true"></i></a><a class="post" href="https://www.tiktok.com/@greensonqo/video/7662893014427208981" target="_blank" rel="noopener" data-embed="https://www.tiktok.com/embed/v2/7662893014427208981"><img src="img/media/tt-7662893014427208981.jpg" alt="Video de TikTok" loading="lazy"><i class="play" aria-hidden="true"></i></a><a class="post" href="https://www.tiktok.com/@greensonqo/video/7607881123108113685" target="_blank" rel="noopener" data-embed="https://www.tiktok.com/embed/v2/7607881123108113685"><img src="img/media/tt-7607881123108113685.jpg" alt="Video de TikTok" loading="lazy"><i class="play" aria-hidden="true"></i></a></div></div><div class="feed"><p class="feed-h"><b>YouTube Shorts</b></p><div class="posts"><a class="post" href="https://www.youtube.com/shorts/ZnjZzAa2vdI" target="_blank" rel="noopener" data-embed="https://www.youtube-nocookie.com/embed/ZnjZzAa2vdI"><img src="img/media/ys-ZnjZzAa2vdI.jpg" alt="Short de YouTube" loading="lazy"><i class="play" aria-hidden="true"></i></a><a class="post" href="https://www.youtube.com/shorts/GZLWuiVCMgM" target="_blank" rel="noopener" data-embed="https://www.youtube-nocookie.com/embed/GZLWuiVCMgM"><img src="img/media/ys-GZLWuiVCMgM.jpg" alt="Short de YouTube" loading="lazy"><i class="play" aria-hidden="true"></i></a><a class="post" href="https://www.youtube.com/shorts/VWOqlv3TlEg" target="_blank" rel="noopener" data-embed="https://www.youtube-nocookie.com/embed/VWOqlv3TlEg"><img src="img/media/ys-VWOqlv3TlEg.jpg" alt="Short de YouTube" loading="lazy"><i class="play" aria-hidden="true"></i></a><a class="post" href="https://www.youtube.com/shorts/bmXZvY6LxPk" target="_blank" rel="noopener" data-embed="https://www.youtube-nocookie.com/embed/bmXZvY6LxPk"><img src="img/media/ys-bmXZvY6LxPk.jpg" alt="Short de YouTube" loading="lazy"><i class="play" aria-hidden="true"></i></a></div></div><div class="feed"><p class="feed-h"><b>Instagram</b></p><div class="posts"><a class="post" href="https://www.instagram.com/p/Dfir7W4laLK/" target="_blank" rel="noopener" data-embed="https://www.instagram.com/p/Dfir7W4laLK/embed"><img src="img/media/ig-Dfir7W4laLK.jpg" alt="Post de Instagram" loading="lazy"><i class="play" aria-hidden="true"></i></a><a class="post" href="https://www.instagram.com/reel/DaB9Jl_Ju-v/" target="_blank" rel="noopener" data-embed="https://www.instagram.com/reel/DaB9Jl_Ju-v/embed"><img src="img/media/ig-DaB9Jl_Ju-v.jpg" alt="Post de Instagram" loading="lazy"><i class="play" aria-hidden="true"></i></a><a class="post" href="https://www.instagram.com/reel/DaMW5rFpB_E/" target="_blank" rel="noopener" data-embed="https://www.instagram.com/reel/DaMW5rFpB_E/embed"><img src="img/media/ig-DaMW5rFpB_E.jpg" alt="Post de Instagram" loading="lazy"><i class="play" aria-hidden="true"></i></a><a class="post" href="https://www.instagram.com/reel/DUY9cI8CVzR/" target="_blank" rel="noopener" data-embed="https://www.instagram.com/reel/DUY9cI8CVzR/embed"><img src="img/media/ig-DUY9cI8CVzR.jpg" alt="Post de Instagram" loading="lazy"><i class="play" aria-hidden="true"></i></a></div></div></div>
+  </div>
+</section>
+
+</div>
+
+<!-- ============ NOSOTROS ============ -->
+<div class="view" id="v-nosotros" hidden>
+<section id="nosotros">
+  <div class="wrap">
+    <div class="sonqo">
+      <img src="img/icono.png" alt="Ícono de Greensonqo: chakana con un corazón" width="512" height="512">
+      <div class="stack">
+        <p class="kicker" data-es="Nosotros" data-en="About us">Nosotros</p>
+        <h2 data-es="Green + sonqo: un corazón verde." data-en="Green + sonqo: a green heart.">Green + sonqo: un corazón verde.</h2>
+        <p class="lede" data-es="Sonqo quiere decir corazón en quechua. Nuestro símbolo es una chakana, la cruz andina, con un corazón en el centro. Juntamos dos palabras y dos mundos, como en la profecía del Águila y el Cóndor: cuando el águila del norte (la mente, la tecnología) y el cóndor del sur (el corazón, la sabiduría ancestral) vuelen juntos, la Tierra empieza a sanar." data-en="Sonqo means heart in Quechua. Our symbol is a chakana, the Andean cross, with a heart at its center. We join two words and two worlds, like the prophecy of the Eagle and the Condor: when the eagle of the north (mind, technology) and the condor of the south (heart, ancestral wisdom) fly together, the Earth begins to heal.">Sonqo quiere decir corazón en quechua. Nuestro símbolo es una chakana, la cruz andina, con un corazón en el centro. Juntamos dos palabras y dos mundos, como en la profecía del Águila y el Cóndor: cuando el águila del norte (la mente, la tecnología) y el cóndor del sur (el corazón, la sabiduría ancestral) vuelen juntos, la Tierra empieza a sanar.</p>
+        <p class="lede" data-es="Frente al cambio climático hay muchas maneras de actuar. La nuestra: mirar cada problema climático como una oportunidad." data-en="There are many ways to act on climate change. Ours: see every challenge as an opportunity.">Frente al cambio climático hay muchas maneras de actuar. La nuestra: mirar cada problema climático como una oportunidad.</p>
+      </div>
+    </div>
+
+    <div class="why">
+      <figure><img src="img/real-rio.jpg" alt="Basura plástica a orillas de un río en Cusco" width="619" height="1100"></figure>
+      <div class="stack">
+        <p class="kicker" data-es="Del problema a la solución" data-en="From problem to solution">Del problema a la solución</p>
+        <h2 data-es="El plástico es un problema. También puede ser la solución." data-en="Plastic is a problem. It can also be the solution.">El plástico es un problema. También puede ser la solución.</h2>
+        <p class="lede" data-es="Hoy el plástico de Cusco termina en el río, en el botadero o en un camión a Lima. Pero ese mismo plástico dura cientos de años: es un material perfecto para bancas, posavasos y muebles que no se pudren. Lo que contamina hoy puede amoblar las plazas de mañana." data-en="Today Cusco's plastic ends up in the river, the dump, or on a truck to Lima. But that same plastic lasts hundreds of years: a perfect material for benches, coasters and furniture that won't rot. What pollutes today can furnish tomorrow's plazas.">Hoy el plástico de Cusco termina en el río, en el botadero o en un camión a Lima. Pero ese mismo plástico dura cientos de años: es un material perfecto para bancas, posavasos y muebles que no se pudren. Lo que contamina hoy puede amoblar las plazas de mañana.</p>
+        <div class="facts">
+          <div class="fact"><b>#2</b><span data-es="Solo plástico duro: tapitas, galoneras, baldes." data-en="Only hard plastic: caps, jugs, buckets.">Solo plástico duro: tapitas, galoneras, baldes.</span></div>
+          <div class="fact"><b>0 km</b><span data-es="a Lima. Se recoge, procesa y usa en Cusco." data-en="to Lima. Collected, processed and used in Cusco.">a Lima. Se recoge, procesa y usa en Cusco.</span></div>
+          <div class="fact"><b>1</b><span data-es="taller en San Jerónimo, desde noviembre 2026." data-en="workshop in San Jerónimo, since November 2026.">taller en San Jerónimo, desde noviembre 2026.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:72px">
+      <p class="kicker" data-es="Misión" data-en="Mission">Misión</p>
+      <h2 style="margin-top:12px" data-es="Que el plástico de Cusco se quede en Cusco." data-en="Keep Cusco's plastic in Cusco.">Que el plástico de Cusco se quede en Cusco.</h2>
+      <div class="mission">
+        <div class="card"><h3 data-es="Contar" data-en="Tell">Contar</h3><p data-es="Historias de los Andes en dos idiomas, para que más gente cuide lo que ve." data-en="Andean stories in two languages, so more people care for what they see.">Historias de los Andes en dos idiomas, para que más gente cuide lo que ve.</p></div>
+        <div class="card"><h3 data-es="Enseñar" data-en="Teach">Enseñar</h3><p data-es="Talleres en colegios, empresas y comunidades: qué plástico sirve y qué hacer con él." data-en="Workshops in schools, companies and communities: which plastic works and what to do with it.">Talleres en colegios, empresas y comunidades: qué plástico sirve y qué hacer con él.</p></div>
+        <div class="card"><h3 data-es="Hacer" data-en="Make">Hacer</h3><p data-es="Piezas hechas a mano en Cusco, con plástico de Cusco, pagando un precio justo a quien recicla." data-en="Pieces handmade in Cusco, from Cusco's plastic, paying a fair price to those who recycle.">Piezas hechas a mano en Cusco, con plástico de Cusco, pagando un precio justo a quien recicla.</p></div>
+      </div>
+    </div>
+
+    <div class="vision">
+      <p class="kicker" data-es="El Cusco que imaginamos · arrastra" data-en="The Cusco we imagine · drag">El Cusco que imaginamos · arrastra</p>
+      <h2 style="margin-top:12px" data-es="El mismo río. Otra decisión." data-en="The same river. A different choice.">El mismo río. Otra decisión.</h2>
+      <div class="cmp">
+        <img src="img/rio-hoy.jpg" alt="Vista aérea de un río canalizado entre la ciudad" width="588" height="730">
+        <img class="after" id="after" src="img/rio-futuro.jpg" alt="El mismo río verde, con parques en sus orillas" width="588" height="730">
+        <span class="handle" id="handle"></span>
+        <span class="lab l" data-es="Hoy" data-en="Today">Hoy</span><span class="lab r" data-es="Mañana · IA" data-en="Tomorrow · AI">Mañana · IA</span>
+        <input type="range" min="0" max="100" value="50" id="cmpr" aria-label="Comparar hoy y mañana">
+      </div>
+      <div class="gallery">
+        <figure><img src="img/parque.jpg" alt="Familias en un parque con bancas recicladas"><figcaption data-es="El aeropuerto convertido en parque" data-en="The airport turned into a park">El aeropuerto convertido en parque</figcaption></figure>
+        <figure><img src="img/mercado.jpg" alt="Mercado con bancas recicladas"><figcaption data-es="La terminal, un mercado" data-en="The terminal, a market">La terminal, un mercado</figcaption></figure>
+        <figure><img src="img/medalla.jpg" alt="Medalla de maratón hecha de tapitas"><figcaption data-es="Medallas de tapitas para la maratón" data-en="Bottle-cap marathon medals">Medallas de tapitas para la maratón</figcaption></figure>
+        <figure><img src="img/brote.jpg" alt="Planta brotando junto a una banca reciclada"><figcaption data-es="Donde hoy hay asfalto" data-en="Where today there's asphalt">Donde hoy hay asfalto</figcaption></figure>
+      </div>
+    </div>
+
+    <div style="margin-top:72px">
+      <p class="kicker" data-es="Nuestra historia" data-en="Our story">Nuestra historia</p>
+      <h2 style="margin-top:12px" data-es="De Portland a San Jerónimo" data-en="From Portland to San Jerónimo">De Portland a San Jerónimo</h2>
+      <div class="timeline">
+        <div class="tl"><p class="when" data-es="Antes" data-en="Before">Antes</p><h3 data-es="Ciencia y residuos en Portland" data-en="Science and waste in Portland">Ciencia y residuos en Portland</h3><p data-es="Estudios en Portland State University y tres años en la industria de residuos." data-en="Studies at Portland State University and three years in the waste industry.">Estudios en Portland State University y tres años en la industria de residuos.</p></div>
+        <div class="tl"><p class="when">2026</p><h3 data-es="Nace el canal" data-en="The channel is born">Nace el canal</h3><p data-es="Greensonqo empieza a contar los Andes. El video del cóndor pasa el medio millón de vistas." data-en="Greensonqo starts telling the story of the Andes. The condor video passes half a million views.">Greensonqo empieza a contar los Andes. El video del cóndor pasa el medio millón de vistas.</p></div>
+        <div class="tl"><p class="when" data-es="Agosto 2026" data-en="August 2026">Agosto 2026</p><h3 data-es="Greensonqo Plástico se formaliza" data-en="Greensonqo Plástico goes official">Greensonqo Plástico se formaliza</h3><p data-es="Primeros bloques de plástico hechos a mano, con una prensa casera." data-en="First plastic blocks made by hand, with a homemade press.">Primeros bloques de plástico hechos a mano, con una prensa casera.</p></div>
+        <div class="tl"><p class="when" data-es="31 octubre 2026" data-en="October 31, 2026">31 octubre 2026</p><h3 data-es="Primer Tapatón y taller propio" data-en="First Tapatón and our own workshop">Primer Tapatón y taller propio</h3><p data-es="Primer Tapatón con Casa Malaquita. El mismo día firmamos el taller de San Jerónimo." data-en="First Tapatón with Casa Malaquita. The same day we signed the San Jerónimo workshop.">Primer Tapatón con Casa Malaquita. El mismo día firmamos el taller de San Jerónimo.</p></div>
+        <div class="tl"><p class="when" data-es="Noviembre 2026" data-en="November 2026">Noviembre 2026</p><h3 data-es="Horno, máquinas y primeros posavasos" data-en="Oven, machines and first coasters">Horno, máquinas y primeros posavasos</h3><p data-es="Un maestro cusqueño construye la extrusora y la trituradora. Salen los primeros posavasos." data-en="A Cusco maestro builds the extruder and shredder. The first coasters come out.">Un maestro cusqueño construye la extrusora y la trituradora. Salen los primeros posavasos.</p></div>
+        <div class="tl next"><p class="when" data-es="Lo que viene" data-en="Coming next">Lo que viene</p><h3 data-es="La primera banca de plástico cusqueño" data-en="The first bench of Cusco plastic">La primera banca de plástico cusqueño</h3><p data-es="La Pieza Nº 0001 y más puntos de acopio en todo Cusco." data-en="Piece No. 0001 and more drop-off points across Cusco.">La Pieza Nº 0001 y más puntos de acopio en todo Cusco.</p></div>
+      </div>
+    </div>
+
+    <div style="margin-top:72px" id="fundador">
+      <p class="kicker" data-es="Cofundador" data-en="Co-founder">Cofundador</p>
+      <div class="founder">
+        <img class="me" src="img/alfredo.jpg" alt="Alfredo González Valenzuela" width="640" height="640">
+        <div class="stack">
+          <h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem)">Alfredo González Valenzuela</h2>
+          <p class="role" data-es="Cofundador · Greensonqo" data-en="Co-founder · Greensonqo">Cofundador · Greensonqo</p>
+          <p data-es="Peruano y estadounidense. Estudió en Portland State University, donde su tesis midió cómo las hojas de eucalipto liberan isopreno al aire, y trabajó tres años en la industria de residuos en Estados Unidos. Allí aprendió que la basura es un problema de diseño, no de destino." data-en="Peruvian and American. He studied at Portland State University, where his thesis measured how eucalyptus leaves release isoprene into the air, and spent three years in the US waste industry. There he learned that trash is a design problem, not a destiny.">Peruano y estadounidense. Estudió en Portland State University, donde su tesis midió cómo las hojas de eucalipto liberan isopreno al aire, y trabajó tres años en la industria de residuos en Estados Unidos. Allí aprendió que la basura es un problema de diseño, no de destino.</p>
+          <p data-es="Hoy vive en Cusco, cuenta las historias de los Andes en Greensonqo y dirige el taller de San Jerónimo, donde el plástico del barrio se vuelve piezas hechas a mano." data-en="Today he lives in Cusco, tells the stories of the Andes on Greensonqo and runs the San Jerónimo workshop, where the neighborhood's plastic becomes handmade pieces.">Hoy vive en Cusco, cuenta las historias de los Andes en Greensonqo y dirige el taller de San Jerónimo, donde el plástico del barrio se vuelve piezas hechas a mano.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="support" id="apoyar">
+      <p class="kicker" data-es="Apoyar" data-en="Support">Apoyar</p>
+      <h2 style="margin-top:12px" data-es="Ayúdanos a llegar a la próxima meta" data-en="Help us reach the next goal">Ayúdanos a llegar a la próxima meta</h2>
+      <div class="fund">
+        <div><div class="amt">S/ 15,000<small data-es="Meta para terminar el arranque · ≈ US$ 4,300" data-en="Goal to finish our launch · ≈ US$ 4,300">Meta para terminar el arranque · ≈ US$ 4,300</small></div></div>
+        <ul>
+          <li><b>S/ 6,000</b><span data-es="Terminar la extrusora y la trituradora con nuestro maestro cusqueño." data-en="Finish the extruder and shredder with our Cusco maestro.">Terminar la extrusora y la trituradora con nuestro maestro cusqueño.</span></li>
+          <li><b>S/ 4,000</b><span data-es="Moldes para bancas, banquillos y posavasos." data-en="Moulds for benches, stools and coasters.">Moldes para bancas, banquillos y posavasos.</span></li>
+          <li><b>S/ 3,000</b><span data-es="Comprar plástico a recicladoras de Cusco a un precio justo." data-en="Buy plastic from Cusco's waste pickers at a fair price.">Comprar plástico a recicladoras de Cusco a un precio justo.</span></li>
+          <li><b>S/ 2,000</b><span data-es="Talleres gratis en colegios de Cusco." data-en="Free workshops in Cusco schools.">Talleres gratis en colegios de Cusco.</span></li>
+        </ul>
+      </div>
+      <p class="lede" style="margin-top:14px" data-es="Con esto sale la Pieza Nº 0001: la primera banca hecha 100% con plástico de Cusco." data-en="This gets us Piece No. 0001: the first bench made 100% from Cusco plastic.">Con esto sale la Pieza Nº 0001: la primera banca hecha 100% con plástico de Cusco.</p>
+      <div class="ways">
+        <div class="card"><h3>Patreon</h3><p data-es="Un aporte mensual: ves el taller por dentro antes que nadie." data-en="A monthly contribution: see inside the workshop before anyone else.">Un aporte mensual: ves el taller por dentro antes que nadie.</p><a class="btn" href="https://patreon.com/greensonqo" target="_blank" rel="noopener" data-es="Ser patrocinador" data-en="Become a patron">Ser patrocinador</a></div>
+        <div class="card"><h3>Yape</h3><p data-es="Una donación única desde tu celular." data-en="A one-time donation from your phone.">Una donación única desde tu celular.</p><figure class="yapeqr"><img src="img/yape-qr.png" alt="QR de Yape de Alfredo González Valenzuela" width="304" height="300"><figcaption>Alfredo González Valenzuela</figcaption></figure></div>
+        <div class="card"><h3 data-es="Con tu plástico" data-en="With your plastic">Con tu plástico</h3><p data-es="Lo más simple: junta tus tapitas limpias y llévalas a un punto de acopio." data-en="The simplest way: save your clean caps and bring them to a drop-off point.">Lo más simple: junta tus tapitas limpias y llévalas a un punto de acopio.</p><button class="btn out" data-go="mapa" data-es="Ver el mapa" data-en="See the map">Ver el mapa</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<section class="join" id="unete">
+  <div class="wrap jgrid">
+    <div class="stack">
+      <p class="kicker" data-es="Únete al movimiento" data-en="Join the movement">Únete al movimiento</p>
+      <h2 data-es="Boletín Greensonqo" data-en="Greensonqo Newsletter">Boletín Greensonqo</h2>
+      <p class="lede" data-es="Déjanos tu nombre y correo: te avisamos de Tapatones, talleres y piezas nuevas. Un correo al mes, nada más." data-en="Leave your name and email: we'll tell you about Tapatones, workshops and new pieces. One email a month, that's it.">Déjanos tu nombre y correo: te avisamos de Tapatones, talleres y piezas nuevas. Un correo al mes, nada más.</p>
+
+    </div>
+    <div class="stack" style="gap:8px">
+      <form class="nl" id="nl" novalidate>
+        <input id="nl-name" name="nombre" type="text" autocomplete="given-name" placeholder="Tu nombre" data-ph-es="Tu nombre" data-ph-en="Your name" required>
+        <input id="nl-mail" name="correo" type="email" autocomplete="email" placeholder="Tu correo" data-ph-es="Tu correo" data-ph-en="Your email" required>
+        <button class="btn" type="submit" data-es="Unirme" data-en="Join">Unirme</button>
+      </form>
+      <p class="nl-msg" id="nl-msg" role="status"></p>
+    </div>
+  </div>
+</section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-blanco.png" alt="greensonqo" width="800" height="322">
+    <p data-es="Hecho a mano en Cusco con plástico reciclado." data-en="Handmade in Cusco from recycled plastic.">Hecho a mano en Cusco con plástico reciclado.</p>
+    <div class="icons light">
+        <a href="https://www.instagram.com/greensonqo" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg></a>
+        <a href="https://www.tiktok.com/@greensonqo" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.2 2.5c.4 2.2 1.8 3.7 4 4v3.2a7.4 7.4 0 0 1-4-1.2v6.8a6.1 6.1 0 1 1-6.1-6.1c.3 0 .6 0 .9.1v3.3a2.9 2.9 0 1 0 2 2.7V2.5h3.2z"/></svg></a>
+        <a href="https://www.youtube.com/@greensonqo" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9l5 3-5 3z" fill="var(--icon-bg,#fff)"/></svg></a>
+        <a href="https://www.facebook.com/greensonqo" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8.2h2.9V4.6H14c-2.6 0-4.2 1.7-4.2 4.3V11H7.4v3.5h2.4V21.5h3.7v-7h2.9l.5-3.5h-3.4V9.2c0-.7.3-1 1-1z"/></svg></a>
+      </div>
+    <small>© 2026 Greensonqo · greensonqo.com</small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ---- Update these numbers by hand after each batch ---- */
+  var IMPACT={kg:1.5, piezas:9, fecha:'9 nov 2026'};
+
+  var lang='es'; try{lang=localStorage.getItem('gs-lang')||'es'}catch(e){}
+  var T=function(es,en){return lang==='es'?es:en};
+
+  /* pages */
+  var VIEWS=['inicio','productos','educacion','media','nosotros'];
+  function show(v,target){
+    if(VIEWS.indexOf(v)<0)v='inicio';
+    VIEWS.forEach(function(x){document.getElementById('v-'+x).hidden=(x!==v)});
+    document.querySelectorAll('.nav [data-go]').forEach(function(b){b.setAttribute('aria-current',b.dataset.go===v?'page':'false')});
+    var el=target&&document.getElementById(target);
+    if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth'})},30);else window.scrollTo(0,0);
+    if(v==='inicio')setTimeout(checkCount,60);
+  }
+  function viewOf(id){if(VIEWS.indexOf(id)>=0)return id;var el=document.getElementById(id);var w=el&&el.closest('.view');return w?w.id.slice(2):'inicio'}
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-go]');if(!b)return;e.preventDefault();var id=b.dataset.go,v=viewOf(id);
+    var h=v==='inicio'?'':'#'+v;
+    if(location.hash!==h){if(h)location.hash=v;else history.pushState(null,'',location.pathname+location.search)}
+    show(v,VIEWS.indexOf(id)<0?id:null)});
+  function goHash(){var h=location.hash.slice(1);show(viewOf(h),VIEWS.indexOf(h)<0?h:null)}
+  window.addEventListener('hashchange',goHash);
+  window.addEventListener('popstate',goHash);
+
+  /* live Google map only on the real domain (embeds are blocked in previews) */
+  if(/greensonqo\.com$/.test(location.hostname)){
+    var f=document.createElement('iframe');f.loading='lazy';f.title='Mapa de puntos de acopio';f.referrerPolicy='no-referrer-when-downgrade';
+    f.src='https://www.google.com/maps?q=Casa%20Malaquita%20Larapa%20Cusco&z=15&output=embed';
+    document.getElementById('mapbox').appendChild(f);
+    document.querySelectorAll('.post[data-embed]').forEach(function(a){var d=document.createElement('div');d.className='post live';var fr=document.createElement('iframe');fr.src=a.dataset.embed;fr.loading='lazy';fr.allow='encrypted-media; fullscreen; picture-in-picture';fr.title=a.querySelector('img').alt;d.appendChild(fr);a.replaceWith(d)});
+    document.querySelectorAll('.vid[data-yt]').forEach(function(a){var d=document.createElement('div');d.className=a.className+' has-embed';var fr=document.createElement('iframe');fr.src='https://www.youtube-nocookie.com/embed/'+a.dataset.yt;fr.title=a.querySelector('b').textContent;fr.allow='accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen';fr.loading='lazy';d.appendChild(fr);a.replaceWith(d)});
+  }
+
+  /* impact counter */
+  var counted=false;
+  function fmt(n,d){return n.toLocaleString(lang==='es'?'es-PE':'en-US',{minimumFractionDigits:d,maximumFractionDigits:d})}
+  function setCounts(p){document.getElementById('c-kg').textContent=fmt(IMPACT.kg*p,1);document.getElementById('c-caps').textContent=fmt(Math.round(IMPACT.kg*1000/2.5*p),0);document.getElementById('c-pz').textContent=fmt(Math.round(IMPACT.piezas*p),0)}
+  function runCount(){if(counted)return;counted=true;var t0=null;function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1400);setCounts(1-Math.pow(1-p,3));if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
+  function checkCount(){var r=document.getElementById('contador').getBoundingClientRect();if(r.height&&r.top<innerHeight*.9)runCount()}
+  window.addEventListener('scroll',checkCount,{passive:true});
+  setTimeout(function(){if(!counted)setCounts(1)},4000);
+
+  /* compare */
+  var cr=document.getElementById('cmpr'),af=document.getElementById('after'),hd=document.getElementById('handle');
+  cr.addEventListener('input',function(){af.style.clipPath='inset(0 0 0 '+cr.value+'%)';hd.style.left=cr.value+'%'});
+
+  /* plastics guide */
+  var SI=[['tapas','Tapas de botella','Bottle caps','De todo tipo y color','Every kind and color'],['proteina','Taper de proteína','Protein tub','Del gimnasio','From the gym'],['creatina','Pote de creatina','Creatine tub','Y suplementos','And supplements'],['shampoo','Shampoo y crema','Shampoo and lotion','Enjuagado','Rinsed'],['lejia','Botella de lejía','Bleach bottle','Vacía y enjuagada','Empty and rinsed'],['galonera','Botella ValyLac','ValyLac bottle','Yogurt, leche y jugo','Yogurt, milk and juice'],['detergente','Detergente líquido','Liquid detergent','Y suavizante','And softener'],['baldes','Baldes y tinas','Buckets and tubs','Rotos también','Broken too'],['vitaminas','Pote de pastillas','Pill bottle','Vitaminas y medicinas, vacío','Vitamins and meds, empty'],['jabas','Jabas y cajones','Crates','De fruta y gaseosa','Fruit and soda']];
+  var NO=[['gaseosa','Botellas de gaseosa','Soda bottles','#1 · las compran los acopiadores','#1 · local buyers take these'],['bolsas','Bolsas y film','Bags and film','#4'],['tecnopor','Tecnopor','Styrofoam','#6'],['blisteres','Blísteres de pastillas','Pill blisters',''],['sucios','Envases sucios','Dirty containers','Lávalos antes','Wash them first'],['tubos','Tubos y mangueras','Pipes and hoses','#3 PVC'],['agroquimicos','Agroquímicos','Agrochemicals','Peligroso','Dangerous'],['medico','Material médico','Medical waste','Peligroso','Dangerous']];
+  function renderGuide(){
+    [['si',SI,''],['no',NO,' no']].forEach(function(g){var el=document.getElementById(g[0]);el.innerHTML='';
+      g[1].forEach(function(it){var d=document.createElement('div');d.className='pl'+g[2];
+        var im=document.createElement('img');im.src='img/pl/'+it[0]+'.jpg';im.alt=T(it[1],it[2]);im.loading='lazy';
+        var b=document.createElement('b');b.textContent=T(it[1],it[2]);
+        var s=document.createElement('span');s.textContent=T(it[3]||'',it[4]||it[3]||'');
+        d.appendChild(im);d.appendChild(b);d.appendChild(s);el.appendChild(d)});
+      if(g[0]==='si'){var c=document.createElement('div');c.className='pl two';c.innerHTML='<div class="tri"><svg viewBox="0 0 100 92" aria-hidden="true"><path d="M50 6 L94 84 H6 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/><text x="50" y="72" text-anchor="middle" font-size="44" font-weight="800" font-family="system-ui,sans-serif" fill="currentColor">2</text></svg></div><b></b><span></span>';c.querySelector('b').textContent=T('¿Tiene el #2?','Does it have #2?');c.querySelector('span').textContent=T('Voltea tu envase y busca el 2 debajo. Si está, ¡sí lo recibimos!','Flip your container and look for the 2 underneath. If it’s there, we take it!');el.appendChild(c)}
+    });
+  }
+
+  /* calculator */
+  var capsEl=document.getElementById('caps');
+  function calc(){var n=+capsEl.value,kg=n*2.5/1000;document.getElementById('capsout').textContent=fmt(n,0);document.getElementById('kg').textContent=fmt(kg,1);document.getElementById('ps').textContent=fmt(Math.floor(kg*1000/70),0)}
+  capsEl.addEventListener('input',calc);
+
+  /* language */
+  function apply(l){
+    lang=l;document.documentElement.lang=l;
+    document.querySelectorAll('[data-es]').forEach(function(el){el.textContent=el.getAttribute('data-'+l)});
+    document.getElementById('lang').textContent=l==='es'?'EN':'ES';
+    document.querySelectorAll('[data-ph-es]').forEach(function(el){el.placeholder=el.getAttribute('data-ph-'+l)});
+    document.getElementById('c-date').textContent=T('Actualizado: ','Updated: ')+IMPACT.fecha+T(' · 1 tapita ≈ 2.5 g',' · 1 cap ≈ 2.5 g');
+    try{localStorage.setItem('gs-lang',l)}catch(e){}
+    renderGuide();calc();if(counted)setCounts(1);
+  }
+  document.getElementById('lang').addEventListener('click',function(){apply(lang==='es'?'en':'es')});
+  document.getElementById('nom').addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('nom-txt').value.trim(),msg=document.getElementById('nom-msg');msg.className='nl-msg';
+    if(!v){msg.className='nl-msg err';msg.textContent=T('Escribe el nombre del negocio.','Write the business name.');return}
+    if(!FORM_URL){msg.className='nl-msg err';msg.textContent=T('Vista previa: el envío funciona en greensonqo.com.','Preview: sending works on greensonqo.com.');return}
+    var fd=new FormData();fd.append(FORM_NOM||FORM_NAME,v);fetch(FORM_URL,{method:'POST',mode:'no-cors',body:fd}).then(function(){msg.textContent=T('¡Gracias! Lo vamos a contactar.','Thanks! We\'ll reach out to them.');e.target.reset()})});
+  /* newsletter (FORM vars hoisted with var) */
+  /* set FORM_URL to the Google Form "formResponse" link to start saving sign-ups */
+  var LIVE=/greensonqo\.com$/.test(location.hostname);
+  var FORM_URL=LIVE?'https://docs.google.com/forms/d/e/1FAIpQLSc80EOGTo6liqaGmR-iYOU2nqiMWGGjJW40eI-1Ha76irG9Yg/formResponse':'', FORM_NAME='entry.612329922', FORM_MAIL='entry.1615843375', FORM_NOM='entry.1836294047';
+  document.getElementById('nl').addEventListener('submit',function(e){
+    e.preventDefault();var n=document.getElementById('nl-name').value.trim(),m=document.getElementById('nl-mail').value.trim(),msg=document.getElementById('nl-msg');
+    msg.className='nl-msg';
+    if(!n||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){msg.className='nl-msg err';msg.textContent=T('Escribe tu nombre y un correo válido.','Enter your name and a valid email.');return}
+    if(!FORM_URL){msg.className='nl-msg err';msg.textContent=T('Vista previa: el envío funciona en greensonqo.com.','Preview: sending works on greensonqo.com.');return}
+    var fd=new FormData();fd.append(FORM_NAME,n);fd.append(FORM_MAIL,m);
+    fetch(FORM_URL,{method:'POST',mode:'no-cors',body:fd}).then(function(){msg.textContent=T('¡Listo! Ya eres parte. Gracias, '+n+'.','Done! You\'re in. Thanks, '+n+'.');e.target.reset()}).catch(function(){msg.className='nl-msg err';msg.textContent=T('No se pudo enviar. Intenta otra vez.','Could not send. Try again.')});
+  });
+  apply(lang);
+  goHash();
+})();
+</script>
+
 </body>
 </html>
